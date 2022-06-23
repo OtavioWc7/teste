@@ -54,7 +54,7 @@ class Slack:
                 if incidentes_ativos != [] and sistema == "Chat":
                     new_values.append(payload)
                     user.append(self.owner_chat)       
-                elif incidentes_ativos == [] and sistema == "Support":
+                elif incidentes_ativos != [] and sistema == "Support":
                     new_values.append(payload)
                     user.append(self.owner_support)
                 elif incidentes_ativos != [] and sistema == "Explore":
