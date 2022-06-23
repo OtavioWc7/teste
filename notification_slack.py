@@ -46,8 +46,8 @@ def notificationSlack():
 
             response = requests.request("POST", url, headers=headers, data=payload)
             print(response.text)
-    except print(error):
-        print
+    except TypeError:
+                return TypeError
     
         
 schedule.every(30).minutes.do(notificationSlack)
