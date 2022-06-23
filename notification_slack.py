@@ -50,7 +50,7 @@ def notificationSlack():
         print
     
         
-schedule.every(30).minutos.do(notificationSlack)
+schedule.every(30).minutes.do(notificationSlack)
 # schedule.every(1).hour.do(notificationSlack)
 while True:
     schedule.run_pending()
