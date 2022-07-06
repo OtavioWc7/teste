@@ -14,7 +14,8 @@ token = os.getenv('TOKEN')
 print('### EXECUTANDO SCRIPT DE MONITORIA ZENDESK ###')
 def notificationSlack():
     print('### CONEXÃO COM SLACK ###')
-    agents = Slack(owner_chat='@otavio.souza', owner_explorer='@otavio.souza', owner_support="@pablo.lemos")
+#     agents = Slack(owner_chat='@otavio.souza', owner_explorer='@otavio.souza', owner_support="@pablo.lemos")
+    agents = Slack(owner_chat='@otavio.souza', owner_explorer="@vanessa.araujo", owner_support="@pablo.lemos")
     dice_zendesk = agents.createPayload()
     try:
         for results in dice_zendesk:
