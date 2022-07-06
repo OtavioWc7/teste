@@ -106,16 +106,15 @@ class Slack:
                 # validação
                 
                 try:
-                    if operacional == "Operacional" and _impacto_ != "Nenhum impacto":
-                        if incidentes_ativos != [] and sistema == "Chat":
-                            new_values.append(payload)
-                            user.append(self.owner_chat)    
-                        elif incidentes_ativos != [] and sistema == "Support":
-                            new_values.append(payload)
-                            user.append(self.owner_support)
-                        elif incidentes_ativos != [] and sistema == "Explore":
-                            new_values.append(payload)
-                            user.append(self.owner_explorer)
+                    if incidentes_ativos != [] and sistema == "Chat":
+                        new_values.append(payload)
+                        user.append(self.owner_chat)    
+                    elif incidentes_ativos != [] and sistema == "Support":
+                        new_values.append(payload)
+                        user.append(self.owner_support)
+                    elif incidentes_ativos != [] and sistema == "Explore":
+                        new_values.append(payload)
+                        user.append(self.owner_explorer)
                 except TypeError:
                     return TypeError
             
